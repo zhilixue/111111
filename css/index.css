@@ -1,0 +1,141 @@
+html{
+    font-size: 100px;
+}
+html,body,.container{
+    height: 100%;
+    overflow:hidden;
+}
+.container{
+    position:relative;
+}
+.container .backgroundImg,.container .background{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+.container .backgroundImg{
+    background: url(../img/myDream.jpg) no-repeat;
+    background-size: cover;
+    -webkit-filter:blur(7px);
+    filter:blur(7px);
+}
+.container .background{
+    z-index: -1;
+    background: rgba(0,0,0,.2);
+}
+.container .header{
+    position: relative;
+    background: rgba(0,0,0,.2);
+    padding: .3rem;
+
+}
+.container .header .content img{
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+
+}
+.container .header .content h2{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: .2rem;
+}
+.container .header .content h2 span{
+    width: .6rem;
+    height: .6rem;
+    text-align: center;
+    line-height: .6rem;
+    display: block;
+    color: white;
+    font-size: .32rem;
+}
+.container .header .content h2 span:nth-child(2){
+    font-size: .3rem;
+}
+.header .musicBtn{
+    position: absolute;
+    right: .6rem;
+    height: .8rem;
+    margin-top: -1rem;
+    width: .8rem;
+    background: url(../img/music.svg) no-repeat;
+    background-size: .6rem;
+}
+.header .musicBtn.move{
+    -webkit-animation:musicMove .5s linear infinite;
+    animation:musicMove .5s linear infinite;
+
+}
+@keyframes musicMove {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.main{
+    margin: .2rem;
+    padding: .3rem;
+    position: relative;
+    /*内容区域需要计算*/
+    height: 6.68rem;
+}
+.footer{
+    padding: .2rem;
+    height: 2.2rem;
+
+}
+.footer .progress{
+    position: relative;
+    height: .8rem;
+
+}
+.footer .progress .span{
+    position: absolute;
+    width: .9rem;
+    height: .8rem;
+    text-align: center;
+    line-height: .8rem ;
+    display: block;
+    color:rgba(255,255,255,.5);
+}
+.footer .progress .current{
+    left: 0;
+}
+.footer .progress .duration{
+    right: 0;
+}
+.footer .progress .proBg{
+    position: relative;
+    /*width: 100%;*/
+    height: .04rem;
+    background: rgba(255,255,255,.5);
+    margin:.4rem .9rem 0 .9rem;
+}
+.footer .progress .proBg .alrdy{
+
+}
+.footer .down{
+    display: block;
+    margin: 0 auto;
+    width: 4.4rem;
+    border-radius: .6rem;
+    height: .9rem;
+    line-height: .9rem;
+    text-align:center;
+    color:rgba(255,255,255,1);
+    font-size:.32rem;
+    background: url(../img/sprite_play.png) .2rem,-5.86rem no-repeat #0b900d;
+    background-size: .8rem 7rem ;
+}
+.main .wrapper{
+    font-size: .28rem;
+    height: .84rem;
+    line-height: .84rem;
+    text-align: center;
+
+}
